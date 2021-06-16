@@ -1,1 +1,2 @@
-// Endring som er sendt via git, test.
+Prosjekt:
+Lage gangeapp til barn i barneskolealder.
