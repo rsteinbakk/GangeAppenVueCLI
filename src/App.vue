@@ -24,6 +24,7 @@ export default {
 
 div * {
   text-shadow: 1px 1px 3px #000000;
+    font-size: 0.98em;
 }
 
 body {
