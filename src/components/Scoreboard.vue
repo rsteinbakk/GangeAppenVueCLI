@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-size: 0.97em;
+  font-weight: normal;
+}
 
 h4 {
     margin-bottom: 5px;
@@ -83,8 +87,8 @@ h4 {
     rgba(206, 206, 206, 0.589) 100%
   );
   border-radius: 5px;
-  height: 25px;
-  line-height: 25px;
+  height: 22px;
+  line-height: 20px;
   margin-bottom: 5px;
   display: flex;
   
