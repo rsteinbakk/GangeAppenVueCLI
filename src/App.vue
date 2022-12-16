@@ -1,16 +1,29 @@
 <template>
   <div id="app">
-    <Main></Main>
+    <LandingPage v-if="landingOn" :landingOff="landingOnOff"></LandingPage>
+    <Main v-if="!landingOn" :landingOff="landingOnOff"></Main>
   </div>
 </template>
 
 <script>
 import Main from "./components/Main.vue";
+import LandingPage from "./components/LandingPage.vue"
 
 export default {
   name: "App",
   components: {
     Main,
+    LandingPage
+  },
+  data() {
+    return {
+      landingOn: true,
+    }
+  },
+  methods: {
+    landingOnOff() {
+      this.landingOn = !this.landingOn;
+    }
   }
 };
 </script>

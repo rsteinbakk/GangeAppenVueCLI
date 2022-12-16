@@ -24,7 +24,7 @@
       v-if="fullScore"
     ></Fullscore>
     <div id="width">
-      <img src="../assets/logo-color.png" id="logo" />
+      <img src="../assets/logo-color.png" id="logo" @click="landingOff" title="Klikk her for å tilbake til hovedsiden/info" alt="GangeAppen logo"/>
     </div>
     <br /><br />
     <div class="gangeoppgave">
@@ -134,6 +134,7 @@ import Scoreboard from "./Scoreboard.vue";
 import Finishedone from "./Finishedone.vue";
 import Fullscore from "./Fullscore.vue";
 export default {
+  props: ['landingOff'],
   components: {
     Scoreboard,
     Multitable,
@@ -309,7 +310,7 @@ export default {
           this.allScores[this.y].scorebar =
             this.allScores[this.y].scorebar + 10;
 
-            let randNumFunny = Math.floor(Math.random() * 3) + 1
+          let randNumFunny = Math.floor(Math.random() * 3) + 1;
           if (randNumFunny == 3) {
             t.funnyPopup = true;
             setTimeout(() => {
@@ -444,6 +445,7 @@ h4 {
   background-color: rgba(255, 255, 255, 0.616);
 }
 #width {
+  cursor: pointer;
   width: 300px;
   margin-top: 30px;
   display: flex;
